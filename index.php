@@ -15,5 +15,6 @@
     $twig = new \Twig\Environment($loader, []);
 
     $libros = ['Libro 1', 'Libro 2'];
+    $libro_terminado = false;
 
-    echo $twig->render('index.html.twig', ['name' => 'Pokemon'], compact('libros'));
+    echo $twig->render('index.html.twig', compact('libros', 'libro_terminado'));

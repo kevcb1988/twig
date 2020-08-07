@@ -1,3 +1,6 @@
+{# Comentarios #}
+{% set nombre_curso = 'Bases de Twig' %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +9,7 @@
     <title>Inicio - TWIGs</title>
 </head>
 <body>
-    <h1> {{ nombre }}</h1>
+    <h1> {{ nombre_curso }}</h1>
     <h2>{{ name }}</h2>
     <h2>Mis libros</h2>
     <ul>
@@ -14,5 +17,15 @@
             <li>{{ libro }}</li>
         {% endfor %}
     </ul>
+
+    {% if libro_terminado == false %}
+        <p>No has terminado de leer</p>
+    {% endif %}
+
+    {% if libro_terminado %}
+        <p>Libro finalizado</p>
+    {% else %}
+        <p>No has terminado de leer</p>
+    {% endif %}
 </body>
 </html>
